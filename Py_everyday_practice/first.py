@@ -40,6 +40,15 @@ __author__ = 'kiya  2018-3-2'
 
 
 
-# 一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？
+# 输入三个整数x,y,z，请把这三个数由小到大输出。
+
+
+# range()语法：range(start, stop[, step])
+lit = []
+for i in range(3):   # 循环3次，实际执行for循环中的操作3次
+    num = int(input('输入数据：'))
+    lit.append(num)   # append():append() 方法用于在列表末尾添加新的对象。
+lit.sort()  # sort() 函数用于对原列表进行排序，如果指定参数，则使用比较函数指定的比较函数。
+print(lit)
 
 
