@@ -48,7 +48,19 @@ __author__ = 'kiya3-4'
 
 # 文件的定位读写
 
-f_file = open('test.txt','r')
+# f_file = open('test.txt','r')
 # f_file.close()
-print(f_file.seek(2,0)) # seek()  2往右偏移，-2住左偏移；0,文件开始，1当前位置，2文件结尾
-print(f_file.read())
+# print(f_file.seek(2,0)) # seek()  2往右偏移，-2住左偏移；0,文件开始，1当前位置，2文件结尾
+# print(f_file.read())
+
+# 文件读取的其它方式 readlines\readline
+
+f = open('new_file.txt')
+# a = f.readline()
+b = f.readlines()
+# print(a)
+print(b)
+
+
+
+

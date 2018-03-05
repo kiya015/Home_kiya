@@ -32,7 +32,7 @@ for tday in time_value:
 	# print(time_tuple)
 	# print(type(time_tuple))
 	d_list = tday.split(' ') # split(' ')以空隔打断tday字符串内容
-	print(d_list)
+	# print(d_list)
 
 
 
@@ -46,7 +46,7 @@ maxtime = max(datelt)  # 取出单个datelt[]中最大时间
 mintime = min(datelt)  # 取出单个datelt[]中最小时间
 
 # print(min(datelt))
-print(max(datelt))
+# print(max(datelt))
 
 mdtime = time.strptime('2018-02-28 09:30:00.0', '%Y-%m-%d %H:%M:%S.0')
 mdtime_2 = time.strptime('2018-02-28 19:00:00.0', '%Y-%m-%d %H:%M:%S.0')
@@ -58,7 +58,9 @@ mdtime_2 = time.strptime('2018-02-28 19:00:00.0', '%Y-%m-%d %H:%M:%S.0')
 
 # 将同格式的时间进行比较
 if mintime < mdtime and maxtime > mdtime_2:
-	print('上班卡时间为：%s,下班卡为：%s' % (mintime,maxtime))
+	print('上班卡时间为：%s,下班卡为：%s' % (time.strftime('%Y-%m-%d %H:%M:%S.0',mintime),time.strftime('%Y-%m-%d %H:%M:%S.0',maxtime)))
+
+	# print(time.strftime('%Y-%m-%d %H:%M:%S.0',mintime))
 	# print('正常')
 
 
