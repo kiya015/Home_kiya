@@ -54,13 +54,14 @@ __author__ = 'kiya3-4'
 # print(f_file.read())
 
 # 文件读取的其它方式 readlines\readline
+#
+# f = open('new_file.txt')
+# # a = f.readline()
+# b = f.readlines()
+# # print(a)
+# print(b)
 
-f = open('new_file.txt')
-# a = f.readline()
-b = f.readlines()
-# print(a)
-print(b)
-
-
-
+f = open('工时计算实操.py','rb')
+a = f.read()
+print(a)
 
