@@ -35,9 +35,10 @@ __author__ = 'kiya3-4'
 # # 通过.将文件名进行切分
 # new_file_name = old_file[:position] + '[复件]' + old_file[position:]
 # print(new_file_name)
-# f_write = open(new_file_name,'w')
-#
-# new_file = f_write.write(f_read)   # 将源文件内容写入新的new_file.txt中
+# f_write = open(new_file_name,'w')  # 打开新文件
+
+# 将源文件内容写入新的new_file.txt中
+# new_file = f_write.write(f_read)
 # f_write.close()  # close新文件
 # newread = open('new_file.txt','r')  #  打开新文件
 # print (newread.read())   # 打印新文件内容
@@ -62,6 +63,18 @@ __author__ = 'kiya3-4'
 # print(b)
 
 
+# 大文件分步读取实现
+f = open('工时计算实操.py', 'rb')
+# f = open('工时计算实操.py','r', encoding='utf8')
+f_old = f.read()
+# print(f_old)
+new = open('newa.txt', 'wb+')
+f_new = new.write(f_old)  # 写入完成后光标移到了最后一位
+
+new.seek(0, 0)  # 将光标移到文档开始位置
+print(new.read())
+
+
 
 # 打开半读取原文件
 # f = open('工时计算实操.py','rb')
@@ -78,7 +91,7 @@ __author__ = 'kiya3-4'
 # print(b.read())
 
 
-# 对大文件进行复制
+# 对大文件进行复制----实现方式：通过部分读写的方式去实现
 # 先创建一个新的文件
 f_new = open('new_file0305.txt', 'w' ,encoding = 'utf-8')
 # 打开原文件进行读且写入新文件中
@@ -86,10 +99,11 @@ f = open('工时计算实操.py','r', encoding = 'UTF-8')
 while True:
     a = f.read(1024)
     # print(type(a))
-    if len(a) == 0:  #  当字节写入长度为0时，说明写入完毕，即跳出循环
+    if len(a) == 0:  # 当字节写入长度为0时，说明写入完毕，即跳出循环
         break
     b = f_new.write(a)
 f.seek(0,2)
 print(len(f.read(1)))  # 验证if len(a) == 0原理
+
 
 
