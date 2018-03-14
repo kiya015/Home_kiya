@@ -3,7 +3,9 @@
 __author__ = 'kiya3-12'
 
 # class 学习实例
-# 实现自我介绍
 
-class Student:
-    pass
+
+class Cat:
+
+    def eat(self):
+        print('猫在吃鱼====')
