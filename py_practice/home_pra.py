@@ -9,17 +9,23 @@ class Home:
 		self.info = ninfo
 		self.addr = naddr
 		self.nnarea = narea
-		self.contain_item = []
+		self.contain_item = []   # 添加多个属性值用列表方式
 
 	def __str__(self):
-		return  '房子的总面积是：%d,地址：%s,户型：%s,放入%s后的面积是:%d' % (self.area, self.info, self.addr, self.contain_item, self.nnarea)
+		return  '房子的总面积是：%d,地址：%s,户型：%s,放入%s后的面积是:%d' % (self.area, self.info, self.addr, str(self.contain_item), self.nnarea)
 
+
+# 将类Bed数据增加至Home
 	def add_item(self, item):
+
+		# 以下为两种实现获取item方式
+
 		# self.nnarea -= item.area
 		# self.contain_item.append(item.info)
 		self.nnarea -= item.get_area()
 		self.contain_item.append(item.get_info())
 
+# 创建一个类为Bed
 class Bed:
 	def __init__(self, ninfo, narea):
 		self.area = narea
