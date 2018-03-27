@@ -42,7 +42,6 @@ gua = potato()
 
 # print(gua)
 
-
-gua.cook(5)
+gua.cook(8)
 gua.addCondinments('辣椒')
 print(gua)
