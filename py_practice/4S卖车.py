@@ -11,10 +11,10 @@ class CarStore(object):
 	# 	if car_type == "现代":
 	# 		return  Xd_car()
 	def __init__(self):
-		self.factorys = Factory() # 此处未完全理解
+		self.factorys = Factory() #  类似于再将Factory这个类实例化
 
 	def order(self, car_type):
-		return self.factorys.factory(car_type)  # 此处未完全理解
+		return self.factorys.factory(car_type)  # 此处self未理解代表谁
 
 	# def order(self, car_type):
 	# 	return factory(car_type)
