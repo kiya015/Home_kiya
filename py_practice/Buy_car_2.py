@@ -2,24 +2,33 @@
 
 __author__ = 'kiya04-8'
 
+# 未实现,部分原理未理解
+
 # 新增一种车库类型如宝马
 class Store(object):
-    def factory_car(self):
+    def select_car(self):
         pass
 
     def order(self, car_type):
-        return self.factory_car(car_type)
+        return self.select_car(car_type)
 
 
 
 
 class Bmwcar(Store):
-    def factory(self, car_type):
-        return Bmwcar().factory(car_type)
+    def select_car(self, car_type):
+		return Bmw_car().factory(car_type)
 
+
+class Bmw_car(object):
+	def factory(self, car_type):
+		if car_type == "mini":
+			return Xd_car()
+		elif car_type == "x6":
+			return Bk_car()
 
 bmw = Bmwcar()
-bmw2 = bmw.order('宝马')
+bmw2 = bmw.order('mini')
 
 class CarStore(object):
 
